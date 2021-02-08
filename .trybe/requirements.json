@@ -62,7 +62,7 @@
     },
     {
       "identifier": "test_validar_tempo_anagrama",
-      "description": "Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 2s (tempo da execução do avaliador no Pull Request)",
+      "description": "Execute a função, somando 10.000 execuções para uma entrada pequena, em menos que 8.2s (tempo da execução do avaliador no Pull Request)",
       "bonus": false
     },
     {
