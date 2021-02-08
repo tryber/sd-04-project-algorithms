@@ -17,17 +17,17 @@ def test_validar_se_encontra_numeros_repetidos():
 
 def test_validar_se_retorna_false_quando_nao_envia_valores():
     nums = []
-    find_duplicate(nums) is False
+    assert find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_envia_string():
     nums = ["a", "b"]
-    find_duplicate(nums) is False
+    assert find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_nao_ha_repeticao():
     nums = [1, 2]
-    find_duplicate(nums) is False
+    assert find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_passa_um_valor_apenas():
@@ -37,7 +37,7 @@ def test_validar_se_retorna_false_quando_passa_um_valor_apenas():
 
 def test_validar_se_retorna_false_quando_passa_numero_negativo():
     nums = [-1, -1]
-    find_duplicate(nums) is False
+    assert find_duplicate(nums) is False
 
 
 def test_validar_tempo_duplicate():
