@@ -32,7 +32,7 @@ def test_validar_se_retorna_false_quando_nao_ha_repeticao():
 
 def test_validar_se_retorna_false_quando_passa_um_valor_apenas():
     nums = [1]
-    find_duplicate(nums) is False
+    assert find_duplicate(nums) is False
 
 
 def test_validar_se_retorna_false_quando_passa_numero_negativo():
