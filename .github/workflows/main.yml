@@ -16,7 +16,7 @@ jobs:
       - name: Pytest Evaluator Step
         uses: betrybe/pytest-evaluator-action@v1.3
         with:
-          repository_main_branch: main
+          repository_main_branch: master
         id: pytest_evaluator
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
