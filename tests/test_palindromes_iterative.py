@@ -22,7 +22,18 @@ def test_validar_se_nao_passar_palavra_iterativa_retorna_false():
 
 
 def test_validar_tempo_iterative():
-    setup_import = ("from challenges.challenge_palindromes_iterative "
-                    "import is_palindrome_iterative")
-    assert timeit.timeit('is_palindrome_iterative("ANA")',
-                         setup=f"{setup_import}", number=10000) <= 0.005
+    setup_import = (
+        "from challenges.challenge_palindromes_iterative "
+        "import is_palindrome_iterative"
+    )
+    word = "ANA"
+    algorithms_correct = is_palindrome_iterative(word) is True
+    time = timeit.timeit(
+            'is_palindrome_iterative("ANA")',
+            setup=f"{setup_import}",
+            number=10000,
+        )
+    correct_time = time <= 0.005
+    assert (
+        algorithms_correct and correct_time
+    ), f"Falhou, o tempo foi: {time}, algoritmo correto? {algorithms_correct}"
