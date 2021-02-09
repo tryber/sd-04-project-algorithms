@@ -1,3 +1,14 @@
+# estudante     1  2  3  4  5  6
+# start_time = [2, 1, 2, 1, 4, 4]
+# end_time   = [2, 2, 3, 5, 5, 5]
+
+# target_time = 5  # saída: 3
+# target_time = 4  # saída: 3
+# target_time = 3  # saída: 2
+# target_time = 2  # saída: 4
+# target_time = 1  # saída: 2
+
+
 def study_schedule(start_time, end_time, target_time):
     students_online = 0
     both_times = start_time + end_time
@@ -10,3 +21,10 @@ def study_schedule(start_time, end_time, target_time):
             for n in range(pair[0], pair[1] + 1):
                 if n == target_time:
                     students_online += 1
+
+
+start_time = [2, 1, 2, 1, 4, 4]
+end_time = [2, 2, 3, 5, 5, 5]
+target_time = 5
+print(f"students_online - target {target_time}:",
+      study_schedule(start_time, end_time, target_time))
