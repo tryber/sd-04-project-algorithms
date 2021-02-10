@@ -1,6 +1,6 @@
 def is_palindrome_recursive(word, low, high):
     """ Faça o código aqui. """
-    if (high == 0) :
+    if (high == 0):
         return 0
     if (low == high): 
         return True
