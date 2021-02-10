@@ -8,7 +8,6 @@ def selection_sort(name):
         arr[minimum], arr[i] = arr[i], arr[minimum]
     return arr
 
+
 def is_anagram(first_string, second_string):
     return selection_sort(first_string) == selection_sort(second_string)
-
-print(is_anagram('amor','rma'))
