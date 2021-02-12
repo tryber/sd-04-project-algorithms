@@ -39,7 +39,7 @@ def insertion_sort(arr, start=0, end=None):
 # https://realpython.com/sorting-algorithms-python/#the-timsort-algorithm-in-python
 def tim_sort(string):
     arr = list(string)
-    min_run = 4
+    min_run = 10
     length = len(arr)
     for start in range(0, length, min_run):
         insertion_sort(arr, start, min((start + min_run), length))
@@ -60,26 +60,3 @@ def tim_sort(string):
 def is_anagram(first_string, second_string):  # codigo não está nada otimizado
     return tim_sort(first_string) == tim_sort(second_string)
     # O(n log n + n log n) ???
-
-
-import timeit
-
-if __name__ == "__main__":
-    tim_sort([3,5,8,2,8,10,32,578,1235,3,56,684,2467])
-    # setup_import = "from challenges.challenge_anagrams " "import tim_sort"
-    # first_string = (
-    #     "Lorem ipsum dolor sit amet, consectetur "
-    #     "adipiscing elit, do sed eiusmod tempor "
-    #     "incididunt ut labore et dolore magna aliqua."
-    # )
-    # second_string = (
-    #     "Lorem ipsum dolor sit amet, consectetur "
-    #     "adipiscing elit, do sed eiusmod tempor "
-    #     "incididunt ut labore et dolore magna aliqua."
-    # )
-    # time = timeit.timeit(
-    #     f'tim_sort("{first_string}")',
-    #     setup=f"{setup_import}",
-    #     number=10000,
-    # )
-    # print(time)
