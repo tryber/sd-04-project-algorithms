@@ -13,3 +13,6 @@ def is_palindrome_recursive(word, low=0, high=None):
         return is_palindrome_recursive(word[low+1:high])
     else:
         return False
+
+
+print("aaaaaaaaa", is_palindrome_recursive(''))
