@@ -28,7 +28,9 @@ def merge_sort(left, right):
     return result
 
 
-def insertion_sort(arr, start, end):
+def insertion_sort(arr, start=0, end=None):
+    if end is None:
+        end = len(arr)
     for i in range(start + 1, end):
         value = arr[i]
         position = i
@@ -42,7 +44,7 @@ def insertion_sort(arr, start, end):
 # fonte de estudo: https://realpython.com/sorting-algorithms-python/#the-timsort-algorithm-in-python
 def tim_sort(string):
     arr = list(string)
-    min_run = 4
+    min_run = 10
     length = len(arr)
 
     for start in range(0, length, min_run):
@@ -58,9 +60,30 @@ def tim_sort(string):
             merged = merge_sort(arr[start:mid], arr[mid:end])
             arr[start : start + len(merged)] = merged
         actual_length *= 2
-    return "".join(arr)
+    return arr
 
 
-def is_anagram(first_string, second_string):
+def is_anagram(first_string, second_string): # codigo não está nada otimizado
     return tim_sort(first_string) == tim_sort(second_string)
     # O(n log n + n log n) ???
+
+
+import timeit 
+if __name__ == '__main__':
+    setup_import = "from challenges.challenge_anagrams " "import tim_sort"
+    first_string = (
+        "Lorem ipsum dolor sit amet, consectetur "
+        "adipiscing elit, do sed eiusmod tempor "
+        "incididunt ut labore et dolore magna aliqua."
+    )
+    second_string = (
+        "Lorem ipsum dolor sit amet, consectetur "
+        "adipiscing elit, do sed eiusmod tempor "
+        "incididunt ut labore et dolore magna aliqua."
+    )
+    time = timeit.timeit(
+        f'tim_sort("{first_string}")',
+        setup=f"{setup_import}",
+        number=10000,
+    )
+    print(time)
