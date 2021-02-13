@@ -10,6 +10,9 @@
 
 
 def study_schedule(start_time, end_time, target_time):
+    # if start_time == [] or end_time == []:
+    #     return 0
+
     students_online = 0
     both_times = start_time + end_time
 
@@ -26,5 +29,4 @@ def study_schedule(start_time, end_time, target_time):
 start_time = [2, 1, 2, 1, 4, 4]
 end_time = [2, 2, 3, 5, 5, 5]
 target_time = 5
-print(f"students_online - target {target_time}:",
-      study_schedule(start_time, end_time, target_time))
+print(study_schedule(start_time, end_time, target_time))
