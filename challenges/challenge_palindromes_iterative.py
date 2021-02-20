@@ -1,3 +1,4 @@
+# https://www.sanfoundry.com/python-program-check-string-palindrome/
 def is_palindrome_iterative(word):
 
     if not word:
