@@ -24,4 +24,3 @@ def find_duplicate(nums):
             return nums[i]
 
     return False
-
