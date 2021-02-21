@@ -1,2 +1,9 @@
 def study_schedule(start_time, end_time, target_time):
-    """ Faça o código aqui. """
+
+    best_time = 0
+    for i in range(len(start_time)):
+        if start_time[i] <= target_time:
+            if target_time <= end_time[i]:
+                best_time += 1
+
+    return best_time
