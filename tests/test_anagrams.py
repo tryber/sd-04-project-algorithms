@@ -51,4 +51,3 @@ def test_validar_tempo_anagrama():
     assert (
         algorithms_correct and correct_time
     ), f"Falhou, o tempo foi: {time}, algoritmo correto? {algorithms_correct}"
-
