@@ -8,6 +8,7 @@ def study_schedule(start_time, end_time, target_time):
 
     return melhor_horario
 
+
 start_time = []
 end_time = [5, 4, 3, 4, 5]
 print(study_schedule(start_time, end_time, 4))
