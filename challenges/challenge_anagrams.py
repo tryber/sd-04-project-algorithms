@@ -1,11 +1,11 @@
 def insert_sort(iterable):
     listed = list(iterable)
-    swapping = False
+    swapping = True
 
     while swapping:
         swapping = False
         for index, item in enumerate(listed):
-            if (index + 1 < len(item)) and item < listed[index + 1]:
+            if (index + 1 < len(listed)) and item > listed[index + 1]:
                 listed[index], listed[index + 1] = (
                     listed[index + 1],
                     listed[index],
