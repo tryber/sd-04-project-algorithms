@@ -1,26 +1,19 @@
-def is_anagram(first_string, second_string):
-    if len(first_string) != len(second_string):
-        return False
+def string_to_dict(str):
+    char_qty = dict()
 
-    if sorted(first_string) == sorted(second_string):
+    for i in str:
+        if i in char_qty:
+            char_qty[i] += 1
+        else:
+            char_qty[i] = 1
+
+    return char_qty
+
+
+def is_anagram(first_string, second_string):
+    dict1 = string_to_dict(first_string)
+    dict2 = string_to_dict(second_string)
+
+    if dict1 == dict2:
         return True
     return False
-
-    # char_qty = dict()
-
-    # for i in first_string:
-    #     if i in char_qty:
-    #         char_qty[i] += 1
-    #     else:
-    #         char_qty[i] = 1
-
-    # for i in second_string:
-    #     if i in char_qty:
-    #         char_qty[i] -= 1
-    #     else:
-    #         char_qty[i] = 1
-
-    # for i in char_qty:
-    #     if char_qty[i] != 0:
-    #         return False
-    # return True
