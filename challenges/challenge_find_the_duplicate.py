@@ -13,4 +13,3 @@ def find_duplicate(nums):
             return num
         n_minus_one = num
     return False
-    

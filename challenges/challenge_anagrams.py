@@ -14,6 +14,7 @@ def sort_me_this_please(word):
         i += 1
     return word_listed
 
+
 def is_anagram(first_string, second_string):
     if (len(first_string) < 1 or len(second_string) < 1):
         return False
