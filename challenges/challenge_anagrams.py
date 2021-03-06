@@ -1,27 +1,10 @@
 def is_anagram(first_string, second_string):
 
-    if (len(first_string) != len(second_string)):
-        return False
+    counter1 = {}
+    for c in first_string.lower():
+        counter1[c] = counter1.get(c, 0) + 1
+    counter2 = {}
+    for c in second_string.lower():
+        counter2[c] = counter2.get(c, 0) + 1
 
-    word_dic = {}
-
-    # n iterations
-    for char in first_string:
-        if word_dic.get(char):
-            word_dic[char] += 1
-        else:
-            word_dic[char] = 1
-
-    # n iterations
-    for char in second_string:
-        if word_dic.get(char):
-            word_dic[char] -= 1
-        else:
-            return False
-
-    # n iterations
-    for v in word_dic.values():
-        if v != 0:
-            return False
-
-    return True
+    return counter1 == counter2
