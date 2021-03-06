@@ -3,7 +3,7 @@ def sort_me_this_please(word):
     i = 0
     while i < len(word_listed):
         minimum = i
-        j = i +1
+        j = i + 1
         while j < len(word_listed):
             if word_listed[j] < word_listed[minimum]:
                 minimum = j
