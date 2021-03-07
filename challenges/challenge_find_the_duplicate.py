@@ -1,11 +1,6 @@
 def find_duplicate(nums):
     """ Faça o código aqui. """
 
-    # verifica se lista está vazia
-    # ou tem apenas um elemento
-    if len(nums) <= 1:
-        return False
-
     # cont_duplicate dicionário que armazena todas as duplicidades
     cont_duplicate = {}
 
