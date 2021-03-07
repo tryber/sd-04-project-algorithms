@@ -8,7 +8,8 @@ def find_duplicate(nums):
 
     # lista alfabeto
     string = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-              'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+              'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+              'w', 'x', 'y', 'z']
 
     # # verifica se a lista contém letras ou números negativos.
     # for num in nums:
@@ -36,10 +37,12 @@ def find_duplicate(nums):
         else:
             cont_duplicate[num] += 1
 
-        # verifica o numero mais frequente,
-        # se o numero atual é maior ao numero anterior, então troca.
-        if cont_duplicate[num] > cont_duplicate[most_frequent]:
-            most_frequent = num
+    # verifica o numero mais frequente,
+    most_frequent = max(cont_duplicate, key=cont_duplicate.get)
+
+    # se o numero atual é maior ao numero anterior, então troca.
+    # if cont_duplicate[num] > cont_duplicate[most_frequent]:
+    #     most_frequent = num
 
     # verifica se os items do dicionário é maior que 1,
     # se for retornar o item com maior duplicidade,
