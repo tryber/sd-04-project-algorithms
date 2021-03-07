@@ -10,10 +10,10 @@ def find_duplicate(nums):
     string = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
               'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-    # verifica se a lista contém letras ou números negativos.
-    for num in nums:
-        if num in string or num < 0:
-            return False
+    # # verifica se a lista contém letras ou números negativos.
+    # for num in nums:
+    #     if num in string or num < 0:
+    #         return False
 
     # cont_duplicate dicionário que armazena todas as duplicidades
     cont_duplicate = {}
@@ -24,6 +24,9 @@ def find_duplicate(nums):
 
     # contando os itens e adicionando no dic(cont_duplicate)
     for num in nums:
+        # verifica se a lista contém letras ou números negativos.
+        if num in string or num < 0:
+            return False
         # caso o item não esteja no dict
         # add com o valor 1.
         if num not in cont_duplicate:
