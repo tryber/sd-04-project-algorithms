@@ -12,3 +12,5 @@ def find_duplicate(nums):
             return nums[i]
 
     return False
+
+nums = [1, 2, 2, 3, 4] duplicate === 2
