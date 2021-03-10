@@ -9,4 +9,5 @@ def is_palindrome_iterative(word):
     else:
         return False
 
+# ::-1 são os itens do array de maneira reversa
 # OVO === OVO
