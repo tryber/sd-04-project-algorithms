@@ -9,4 +9,4 @@ def is_palindrome_recursive(word, low, high):
         return is_palindrome_recursive(word, low+1, high-1)
     return False
 
-OVO === OVO
+# OVO === OVO

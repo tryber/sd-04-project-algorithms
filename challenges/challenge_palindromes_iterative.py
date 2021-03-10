@@ -9,4 +9,4 @@ def is_palindrome_iterative(word):
     else:
         return False
 
-OVO === OVO
+# OVO === OVO

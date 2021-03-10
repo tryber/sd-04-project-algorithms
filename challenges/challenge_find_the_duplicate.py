@@ -13,4 +13,4 @@ def find_duplicate(nums):
 
     return False
 
-nums = [1, 2, 2, 3, 4] duplicate === 2
+# nums = [1, 2, 2, 3, 4] then duplicate === 2
