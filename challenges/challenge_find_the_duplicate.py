@@ -1,5 +1,6 @@
 # quora.com/What-is-the-python-program-for-finding-duplicate-element-from-a-list
 
+
 def find_duplicate(nums):
     """ Faça o código aqui. """
 
