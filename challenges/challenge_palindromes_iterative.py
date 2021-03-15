@@ -8,9 +8,10 @@ def is_palindrome_iterative(word):
     else:
         return False
 
-#     rev_word = reversed(word)
+    # rev_word = reversed(word)
 
-#     if len(word) == 0:
-#         return False
-#     if list(word) == list(rev_word):
-#         return True
+    # if len(word) == 0:
+    #     return False
+    # if list(word) == list(rev_word):
+    #     return True
+    # return False
