@@ -18,4 +18,3 @@ def is_anagram(first_string, second_string):
     if my_sorted(list(first_string)) == my_sorted(list(second_string)):
         return True
     return False
-
