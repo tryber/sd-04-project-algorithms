@@ -3,7 +3,8 @@
 #     for i in range(len(array)):
 #         current_value = array[i]
 #         current_position = i
-#         # enquanto o valor da posição for menor que os elementos a sua esquerda
+#         # enquanto o valor da posição for menor que os elementos
+#           a sua esquerda
 #         while (
 #             current_position > 0
 #             and array[current_position - 1] > current_value
