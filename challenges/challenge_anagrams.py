@@ -24,7 +24,7 @@ second_string = "perda"
 
 print(is_anagram(first_string, second_string))
 
-# tempo 8.79
+# tempo 8.79 
 # def selectionSort(frase):
 #         string = list(frase)
 #         n = len(frase)
