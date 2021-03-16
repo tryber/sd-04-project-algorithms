@@ -1,4 +1,4 @@
-def merge_sorted(left_array, right_array, copied_array):
+def merged_sorted(left_array, right_array, copied_array):
     left_index = 0
     right_index = 0
     length_left = len(left_array)
@@ -29,7 +29,7 @@ def merge_sort(array):
     left_array = merge_sort(array[:mid_index])
     right_array = merge_sort(array[mid_index:])
 
-    return merge_sorted(left_array, right_array, array)
+    return merged_sorted(left_array, right_array, array)
 
 
 def is_anagram(first_string, second_string):
