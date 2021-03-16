@@ -18,5 +18,4 @@ def insertion_sort(array):
             array[current_position] = array[current_position - 1]
             current_position = current_position - 1
         array[current_position] = current_value
-    print(array)
     return array
