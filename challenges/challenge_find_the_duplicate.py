@@ -14,11 +14,11 @@ def find_duplicate(nums):
         return False
     except TypeError:
         return False
-    except IndexError:
-        return False
+    # except IndexError:
+    #     return False
 
 
-# nums = [3, 1, 2, 4, 6, 5, 7, 8]
-# nums2 = [-1, -1]
+nums = [3, 1, 2, 4, 6, 5, 7, 8]
+nums2 = [-1, -1]
 
-# print(find_duplicate(nums2))
+print(find_duplicate(nums))
