@@ -58,3 +58,18 @@ def study_schedule(start_time, end_time, target_time):
 # alvo = 5
 
 # print(f"chamada{study_schedule(start, end, alvo)}")
+
+# dicionario = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+#     if len(start_time) == 0 or target_time == 0:
+#         return 0
+#     else:
+#         for hora_a in range(len(start_time)):
+#             contador = start_time[hora_a]
+#             if start_time[hora_a] == end_time[hora_a]:
+#                 dicionario[start_time[hora_a]] += 1
+#             else:
+#                 for _ in range((end_time[hora_a] - start_time[hora_a]) + 1):
+#                     dicionario[contador] += 1
+#                     contador += 1
+
+#     return dicionario[target_time]
