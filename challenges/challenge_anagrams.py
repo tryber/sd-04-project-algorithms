@@ -21,7 +21,8 @@ def merge_sort(arr):
     left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
     return merge(left, right, arr.copy())
 
-# referência https://stackoverflow.com/questions/48217471/is-it-possible-to-check-for-anagram-without-using-sorted-or-dictionary-that-pe
+# referência https://stackoverflow.com/questions/48217471/is-it-possible-to
+# -check-for-anagram-without-using-sorted-or-dictionary-that-pe
 
 
 def is_anagram(first_string, second_string):
