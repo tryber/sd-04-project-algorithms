@@ -1,6 +1,6 @@
 def is_anagram(first_string, second_string):
-        def qsort(string):
-            inlist = list(string)
+    def qsort(string):
+        inlist = list(string)
         if inlist == []:
             return []
         else:
