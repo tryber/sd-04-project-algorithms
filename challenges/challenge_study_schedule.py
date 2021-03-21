@@ -5,5 +5,5 @@ def study_schedule(start_time, end_time, target_time):
     else:
         for number in enumerate(start_time):
             if start_time[number] <= target_time <= end_time[number]:
-                    count += 1
+                count += 1
     return count
