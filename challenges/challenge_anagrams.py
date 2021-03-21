@@ -1,3 +1,9 @@
+def insert_the_rest(position, string, merged):
+    for index in range(position, len(string)):
+        merged = merged + string[index]
+    return merged
+
+
 def merge_by_sort(first, second):
     merged = ''
     first_i, second_i = 0, 0
@@ -9,12 +15,9 @@ def merge_by_sort(first, second):
             merged = merged + second[second_i]
             second_i += 1
     if first_i >= len(first):
-        for index in range(second_i, len(second)):
-            merged = merged + second[index]
+        merged = insert_the_rest(second_i, second, merged)
     else:
-        for index in range(first_i, len(first)):
-            merged = merged + first[index]
-
+        merged = insert_the_rest(first_i, first, merged)
     return merged
 
 
