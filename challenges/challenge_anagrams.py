@@ -34,5 +34,25 @@ def insertion_sort(arr, start=0, end=None):
         arr[position] = value
     return arr
 
+def tim_sort(string):
+    arr = list(string)
+    min_run = 10
+    length = len(arr)
+    for start in range(0, length, min_run):
+        insertion_sort(arr, start, min((start + min_run), length))
+    actual_length = min_run
+    while actual_length < length:
+        for start in range(0, length, actual_length * 2):
+            mid = start + actual_length
+            end = min((start + actual_length * 2), length)
+            if mid >= end:
+                break
+            merged = merge_sort(arr[start:mid], arr[mid:end])
+            arr[start:start + len(merged)] = merged
+
+        actual_length *= 2
+    return arr
+
+
 def is_anagram(first_string, second_string):
     return tim_sort(first_string) == tim_sort(second_string)
