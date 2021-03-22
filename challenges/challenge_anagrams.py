@@ -34,6 +34,7 @@ def insertion_sort(arr, start=0, end=None):
         arr[position] = value
     return arr
 
+
 def tim_sort(string):
     arr = list(string)
     min_run = 10
@@ -56,4 +57,3 @@ def tim_sort(string):
 
 def is_anagram(first_string, second_string):
     return tim_sort(first_string) == tim_sort(second_string)
-#sss
