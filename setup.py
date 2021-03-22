@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name="algorithms",
-    description="Project Agorithms",
+    name="project_algorithms",
+    description="Projeto Agoritimos",
     setup_requires=["pytest-runner"],
     tests_require=["pytest"]
 )
