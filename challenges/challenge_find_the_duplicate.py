@@ -1,10 +1,13 @@
 def find_duplicate(nums):
     order = sorted(nums)
-    for i, number in enumerate(order):
-        # print(number, order[i])
-        # compara o numero com o próximo da lista
-        if number == order[i + 1]:
-            return number
+    if len(nums) > 1:
+        for i, number in enumerate(order):
+            if type(number) != int or number < int(0):
+                return False
+            # print(number, order[i])
+            # compara o numero com o próximo da lista
+            if number == order[i - 1]:
+                return number
     return False
 
 
