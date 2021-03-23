@@ -14,10 +14,7 @@ def is_anagram(first_string, second_string):
 def sort_word(word):
     word_letters = list(word)
     for i in range(len(word)-1):
-        temp = word_letters[i]
         for n in range(i, len(word) - 1):
-            if word_letters[n + 1] < temp:
-                word_letters[i] = word_letters[n + 1]
-                word_letters[n + 1] = temp
-                temp = word_letters[i]
+            if word_letters[n + 1] < word_letters[i]:
+                word_letters[i], word_letters[n + 1] = word_letters[n + 1], word_letters[i]
     return word_letters
