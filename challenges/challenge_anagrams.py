@@ -17,5 +17,5 @@ def sort_word(word):
         for n in range(i, len(word) - 1):
             if word_letters[n + 1] < word_letters[i]:
                 word_letters[i], word_letters[n +
-                        1] = word_letters[n + 1], word_letters[i]
+                    1] = word_letters[n + 1], word_letters[i]
     return word_letters
