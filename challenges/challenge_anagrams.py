@@ -1,10 +1,15 @@
 def is_anagram(first_string, second_string):
-    if len(first_string) != len(second_string):
-        return False
+    sorted_first_string = sort_word(
+        first_string.replace(" ", "").replace(".", "").replace(",", "")
+    )
+
+    sorted_second_string = sort_word(
+        second_string.replace(
+            " ", "").replace(".", "").replace(",", "")
+    )
 
     if(
-        sort_word(first_string.replace(" ", ""))
-        == sort_word(second_string.replace(" ", ""))
+        sorted_first_string == sorted_second_string
     ):
         return True
 
