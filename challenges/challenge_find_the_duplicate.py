@@ -9,4 +9,3 @@ def find_duplicate(nums):
             return nums[x]
 
     return False
-# https://stackoverflow.com/questions/40167364/find-the-duplicate-number
