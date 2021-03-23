@@ -6,5 +6,3 @@ def is_palindrome_iterative(word):
         if word[i] != word[len(word) - i - 1]:
             return False
     return True
-
-print(is_palindrome_iterative("saas"))
