@@ -55,5 +55,6 @@ def tim_sort(string):
         actual_length *= 2
     return arr
 
+
 def is_anagram(first_string, second_string):
     return tim_sort(first_string) == tim_sort(second_string)
