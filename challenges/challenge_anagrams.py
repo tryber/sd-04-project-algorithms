@@ -3,7 +3,7 @@ def merge_sort(left, right):
     i_left = i_right = 0
     left_length = len(left)
     right_length = len(right)
-
+    
     while i_left < left_length and i_right < right_length:
         if left[i_left] <= right[i_right]:
             result.append(left[i_left])
@@ -11,13 +11,13 @@ def merge_sort(left, right):
         else:
             result.append(right[i_right])
             i_right += 1
-
+    
     if i_right == right_length:
         result += left[i_left:]
-
+    
     if i_left == left_length:
         result += right[i_right:]
-
+    
     return result
 
 
@@ -39,10 +39,8 @@ def tim_sort(string):
     arr = list(string)
     min_run = 10
     length = len(arr)
-
     for start in range(0, length, min_run):
         insertion_sort(arr, start, min((start + min_run), length))
-
     actual_length = min_run
     while actual_length < length:
         for start in range(0, length, actual_length * 2):
