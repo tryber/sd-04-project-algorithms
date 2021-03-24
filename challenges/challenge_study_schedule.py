@@ -1,2 +1,8 @@
 def study_schedule(start_time, end_time, target_time):
-    """ Faça o código aqui. """
+    result = [
+        index
+        for index, time in enumerate(start_time)
+        if time <= target_time <= end_time[index]
+    ]
+
+    return len(result)
