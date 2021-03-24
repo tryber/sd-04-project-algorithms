@@ -5,3 +5,4 @@ def study_schedule(start_time, end_time, target_time):
             studing += 1
 
     return studing
+    
