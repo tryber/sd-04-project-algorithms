@@ -10,6 +10,6 @@ def quick_sort(word):
         return []
     else:
         first = word_list[0]
-        lesser = quick_sort([index for index in word_list[1:] if index < first])
-        greater = quick_sort([index for index in word_list[1:] if index >= first])
-        return lesser + [first] + greater
+        lsr = quick_sort([index for index in word_list[1:] if index < first])
+        gtr = quick_sort([index for index in word_list[1:] if index >= first])
+        return lsr + [first] + gtr
