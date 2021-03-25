@@ -1,2 +1,5 @@
 def is_palindrome_iterative(word):
-    """ Faça o código aqui. """
+    if word:
+        splitWord = list(reversed(list(word)))
+        return word == "".join(splitWord)
+    return False
