@@ -1,7 +1,9 @@
 def is_palindrome_iterative(word):
-    if (not word or word == ''):
+    if word == '':
         return False
-    for i in range(0, len(word)):
-        if (word[len(word) - 1 - i] != word[i]):
-            return False
-    return True
+
+    mirrowed = word[::-1]
+    if word == mirrowed:
+        return True
+    else:
+        return False
