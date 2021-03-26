@@ -1,3 +1,24 @@
+def is_anagram(first_string, second_string):
+    if len(first_string) != len(second_string):
+        return False
+
+    first = list(first_string)
+    second = list(second_string)
+
+    a = merge_sort(first)
+    b = merge_sort(second)
+
+    if(a == b):
+        return True
+    for index in range(len(a)):
+        if a[index] not in b:
+            return False
+def merge_sort(array):
+    if len(array) <= 1:
+        return array
+    mid = len(array) // 2
+    left, right = merge_sort(array[:mid]), merge_sort(array[mid:])
+    return merge(left, right, array.copy())
 def merge(left, right, merged):
     left_cursor, right_cursor = 0, 0
     while left_cursor < len(left) and right_cursor < len(right):
@@ -12,25 +33,3 @@ def merge(left, right, merged):
     for right_cursor in range(right_cursor, len(right)):
         merged[left_cursor + right_cursor] = right[right_cursor]
     return merged
-
-
-def merge_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    mid = len(arr) // 2
-    left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
-    return merge(left, right, arr.copy())
-
-# referência https://stackoverflow.com/questions/48217471/is-it-possible-to
-# -check-for-anagram-without-using-sorted-or-dictionary-that-pe
-
-
-def is_anagram(first_string, second_string):
-    if first_string == "" or second_string == "":
-        return False
-    primeiro_anagrama = "".join(merge_sort(list(first_string)))
-    segundo_anagrama = "".join(merge_sort(list(second_string)))
-    for i in range(len(primeiro_anagrama)):
-        if primeiro_anagrama[i] != segundo_anagrama[i]:
-            return False
-    return True
