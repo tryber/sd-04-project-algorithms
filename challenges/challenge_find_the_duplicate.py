@@ -1,4 +1,3 @@
-
 def find_duplicate(numbers):
     for i, current_number in enumerate(numbers):
         for next_number in numbers[i + 1:]:
