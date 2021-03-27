@@ -1,2 +1,5 @@
 def find_duplicate(nums):
-    """ Faça o código aqui. """
+    numsList = list()
+    if numsList not in nums:
+        return False
+    return True
